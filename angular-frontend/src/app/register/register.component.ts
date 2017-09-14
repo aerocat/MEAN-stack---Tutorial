@@ -38,12 +38,11 @@ export class RegisterComponent implements OnInit {
     this.flashMessage.show('All fields are required', {cssClass: 'alert-danger', timeout: 3000});
     return false;
     }
-
+    
   if(!this.validateService.validateEmail(user.email)) {
     this.flashMessage.show('You did not provide a valid email', {cssClass: 'alert-danger', timeout: 3000});
     return false;
       }
-
 
   // Register user
   this.AuthService.registerUser(user).subscribe(data => {
