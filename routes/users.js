@@ -53,7 +53,7 @@ router.post('/authenticate', (req, res) => {
 				//  a dump of what's in the database
 				res.json({
 					success: true,
-					token: 'JWT ' + token,
+					token: 'Bearer ' + token,
 					user: {
 						id: user._id,
 						name: user.name,
